@@ -32,6 +32,24 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "blogs"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "blog_id"
+    },
+    "likes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::like.like",
+      "mappedBy": "blog_id"
+    },
+    "saves": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::save.save",
+      "mappedBy": "blog_id"
     }
   }
 }

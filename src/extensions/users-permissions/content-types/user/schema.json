@@ -71,6 +71,18 @@
       "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "author"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "commented_by"
+    },
+    "saves": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::save.save",
+      "mappedBy": "user_id"
     }
   }
 }
